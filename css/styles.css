@@ -1,0 +1,14 @@
+body {
+  background: #474747;
+}
+
+.wiki-viewer {
+  padding: 50px;
+  margin: 50px auto;
+  background: #fff;
+}
+
+.wiki-search {
+  background: #eee;
+  padding: 20px;
+}

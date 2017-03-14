@@ -3,11 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>FCC Wikipedia Viewer</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
+        <div class="col-md-6 offset-md-3 wiki-viewer">
+          <div class="input-group wiki-search">
+            <div class="input-group">
+              <input type="text" name="wiki-input" class="form-control" placeholder="Search all of Wiki with a click of a mouse.">
+                <span class="input-group-btn">
+                  <input type="submit" class="btn btn-primary wiki-submit">
+                </span>
+            </div>
+          </div><!--wiki-search-->
+
+          <div class="wiki-results">
+          </div><!--wiki-results-->
+        </div><!--wiki-viewer-->
       </div><!--row-->
     </div><!--container-->
 
