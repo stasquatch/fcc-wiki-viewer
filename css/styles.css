@@ -1,5 +1,29 @@
 body {
   background: #474747;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+  padding: 10px 0 30px;
+}
+
+h2 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight:bold;
+  letter-spacing: 1.5px;
+  border-bottom: 2pt solid #0275d8;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+}
+
+p {
+  padding: 0;
+  margin: 5px 0;
+}
+
+input {
+  font-family: 'Nunito', sans-serif;
 }
 
 .wiki-viewer {
@@ -11,4 +35,17 @@ body {
 .wiki-search {
   background: #eee;
   padding: 20px;
+}
+
+.wiki-results {
+  padding-top: 20px;
+}
+
+.result {
+  margin: 15px 0;
+  padding: 20px;
+}
+
+.result:hover {
+  background: #eee;
 }
