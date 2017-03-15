@@ -12,14 +12,14 @@ wikiSubmit.addEventListener("click", function() {
 });
 
 function fetchJSON(wikiQuery) {
-  var urlBase = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=";
-  var urlEnd = "&rvprop=content";
+  var urlBase = "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=";
+  var urlEnd = "&rvprop=content&format=json&callback=?";
   var request = new XMLHttpRequest();
 
   // replace spaces with %20
   wikiQuery = wikiQuery.replace(/ /g,"%20");
 
-  $.getJSON('https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json', function(data) {
-      console.log(data);
+  $.getJSON(urlBase + wikiQuery + urlEnd, function(data) {
+      console.log(data.query.pages);
   })
 }
