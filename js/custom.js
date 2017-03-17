@@ -1,6 +1,6 @@
 var wikiSubmit = document.getElementById('wiki-submit');
 
-wikiSubmit.addEventListener("click", function() {
+$('#wiki-submit').click(function() {
   var wikiQuery = document.getElementById('wiki-input').value;
 
   // Error handling if left blank
@@ -12,14 +12,26 @@ wikiSubmit.addEventListener("click", function() {
 });
 
 function fetchJSON(wikiQuery) {
-  var urlBase = "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=";
-  var urlEnd = "&rvprop=content&format=json&callback=?";
-  var request = new XMLHttpRequest();
-
   // replace spaces with %20
   wikiQuery = wikiQuery.replace(/ /g,"%20");
 
-  $.getJSON(urlBase + wikiQuery + urlEnd, function(data) {
-      console.log(data.query.pages);
+  var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + wikiQuery + "&format=json&callback=?";
+  var request = new XMLHttpRequest();
+
+  $.ajax({
+    type: 'GET',
+    url: url,
+    async: false,
+    dataType: 'json',
+    success: function(data) {
+      console.log(data[2]);
+    },
+    error: function(error) {
+      $('.error').html('<span class="error">Looks like there was an error contacting the server. Please let the webmaster know.</span>');
+    }
   })
+}
+
+function placeResults(results) {
+
 }
