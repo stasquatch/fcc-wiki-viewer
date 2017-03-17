@@ -17,6 +17,11 @@ h2 {
   padding-bottom: 4px;
 }
 
+h3 {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
 p {
   padding: 0;
   margin: 5px 0;
@@ -39,8 +44,14 @@ input {
   border-radius: 5px;
 }
 
+.error {
+  font-style: italic;
+  margin: 10px 0 0 0;
+  color: red;
+}
+
 .wiki-results {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .result {
@@ -51,4 +62,9 @@ input {
 .result:hover {
   background: #eee;
   border-radius: 5px;
+}
+
+.wiki-results a {
+  text-decoration: none;
+  color: inherit;
 }
