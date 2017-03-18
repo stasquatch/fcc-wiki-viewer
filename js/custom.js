@@ -1,5 +1,4 @@
 // add enter key functionality
-
 $('#wiki-submit').click(wikiViewer);
 $('#wiki-input').keypress(function() {
   if (event.which == 13) {
